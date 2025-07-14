@@ -1,0 +1,22 @@
+@use './utils/reset';
+@use './utils/variables' as *;
+@use './utils/fonts';
+
+@use './blocks/header/header';
+
+body {
+  background: $black;
+}
+
+.container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 12px;
+  }
+}
