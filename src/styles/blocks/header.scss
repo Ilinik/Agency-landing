@@ -146,12 +146,48 @@
 
 @media (max-width: 768px) {
   .header {
+    position: relative;
+
     .nav {
       display: none;
+      gap: 20px;
+
+      &.active {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        height: 30vh;
+        background: rgba(35, 35, 35, 0.4);
+        border: none;
+        border-radius: 6px;
+        position: absolute;
+        top: 90px;
+        right: 0;
+      }
+
+      .menu {
+        margin: 2rem 2rem 0 2rem;
+        flex-direction: column;
+        justify-content: center;
+
+        &__arrow {
+          display: none;
+        }
+      }
     }
 
     .burger-menu {
       display: flex;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .header {
+    .nav {
+      &.active {
+        width: 50%;
+      }
     }
   }
 }
