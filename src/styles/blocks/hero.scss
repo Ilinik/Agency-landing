@@ -1,11 +1,149 @@
-.section--hero {
-  background: url('../../assets/images/backgrounds/hero.jpg') no-repeat center
-    center;
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+@use '../utils/variables' as *;
+
+.hero {
+  display: flex;
+  justify-content: center;
+
+  &__bg {
+    background: url('../../assets/images/backgrounds/hero.jpg') no-repeat center
+      center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__wrapper {
+    margin-top: 99px;
+    display: flex;
+    flex-direction: column;
+    max-width: 523px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-size: clamp(
+      2.875rem,
+      2.116504854368932rem + 3.2362459546925564vw,
+      6rem
+    );
+    font-weight: 700;
+    line-height: 80px;
+
+    &--gradient {
+      background: linear-gradient(
+        218deg,
+        #9de8ee 25.05%,
+        #9de8ee 25.05%,
+        #fa7c0b 51.71%,
+        #9f8ced 79.45%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__text {
+    margin-bottom: 32px;
+    color: $text-color;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+    font-size: clamp(
+      0.875rem,
+      0.8446601941747572rem + 0.12944983818770225vw,
+      1rem
+    );
+  }
+
+  .email-input {
+    display: flex;
+    gap: 16px;
+
+    &__email {
+      display: flex;
+      padding: 16px;
+      align-items: center;
+      align-self: stretch;
+      max-width: 288px;
+      width: 100%;
+      border-radius: 30px;
+      border: 2px solid #a1aebf;
+      font-size: clamp(
+        0.875rem,
+        0.8446601941747572rem + 0.12944983818770225vw,
+        1rem
+      );
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0.32px;
+    }
+
+    &__btn {
+      display: flex;
+      padding: 12px 24px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      align-self: stretch;
+      border-radius: 1000px;
+      background: $yellow;
+      color: $black;
+      font-size: clamp(
+        0.75rem,
+        0.7196601941747572rem + 0.12944983818770225vw,
+        0.875rem
+      );
+      cursor: pointer;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: #fbb126;
+      }
+
+      &:active {
+        background: #d58f0c;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    &__title {
+      line-height: 70px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    &__title {
+      line-height: 60px;
+    }
+
+    .email-input {
+      &__email {
+        padding: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .hero {
+    &__title {
+      line-height: 50px;
+    }
+
+    .email-input {
+      &__email {
+        padding: 12px;
+      }
+    }
+  }
 }
