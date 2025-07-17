@@ -1,6 +1,11 @@
 @use '../utils/variables' as *;
 
+.section--hero {
+  padding: 0 !important;
+}
+
 .hero {
+  height: calc(100vh - 90px);
   display: flex;
   justify-content: center;
 
@@ -115,7 +120,7 @@
 @media (max-width: 1024px) {
   .hero {
     &__title {
-      line-height: 70px;
+      line-height: 60px;
     }
   }
 }
@@ -123,7 +128,7 @@
 @media (max-width: 768px) {
   .hero {
     &__title {
-      line-height: 60px;
+      line-height: 50px;
     }
 
     .email-input {
@@ -136,10 +141,6 @@
 
 @media (max-width: 375px) {
   .hero {
-    &__title {
-      line-height: 50px;
-    }
-
     .email-input {
       &__email {
         padding: 12px;

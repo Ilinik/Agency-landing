@@ -4,17 +4,18 @@
 
 @use 'blocks/header';
 @use 'blocks/hero';
+@use 'blocks/companies';
 
 body {
   background: $black;
   font-family: Agrandir, sans-serif;
   font-weight: 700;
   color: $white;
-  font-size: clamp(
-    0.875rem,
-    0.7736486486486487rem + 0.43243243243243246vw,
-    1.125rem
-  );
+  font-size: 18px;
+}
+
+.section {
+  padding: 80px 0;
 }
 
 .container {
