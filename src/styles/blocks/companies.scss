@@ -115,3 +115,30 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .companies {
+    &__title {
+      line-height: 40px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .companies {
+    &__title {
+      line-height: 30px;
+    }
+  }
+
+  .scroll {
+    &__top,
+    &__bottom {
+      height: 65px;
+    }
+
+    &__item {
+      height: 65px;
+    }
+  }
+}
