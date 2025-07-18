@@ -1,10 +1,12 @@
 @use './utils/reset';
 @use './utils/variables' as *;
 @use './utils/fonts';
+@use './utils/mixins';
 
 @use 'blocks/header';
 @use 'blocks/hero';
 @use 'blocks/companies';
+@use 'blocks/offer';
 
 body {
   background: $black;
@@ -16,6 +18,14 @@ body {
 
 .section {
   padding: 80px 0;
+
+  &--hero {
+    padding: 0 !important;
+  }
+
+  &--offer {
+    background: $section-bg;
+  }
 }
 
 .container {

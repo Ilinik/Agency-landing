@@ -1,8 +1,5 @@
 @use '../utils/variables' as *;
-
-.section--hero {
-  padding: 0 !important;
-}
+@import '../utils/mixins';
 
 .hero {
   height: calc(100vh - 90px);
@@ -54,15 +51,7 @@
 
   &__text {
     margin-bottom: 32px;
-    color: $text-color;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.32px;
-    font-size: clamp(
-      0.875rem,
-      0.8446601941747572rem + 0.12944983818770225vw,
-      1rem
-    );
+    @include gray-text;
   }
 
   .email-input {
