@@ -1,0 +1,38 @@
+@use 'utils/variables' as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $black;
+  font-family: Agrandir, sans-serif;
+  font-weight: 700;
+  color: $white;
+  font-size: 18px;
+}
+
+.section {
+  padding: 80px 0;
+
+  &--hero {
+    padding: 0 !important;
+  }
+
+  &--color {
+    background: $section-bg;
+  }
+}
+
+.container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (max-width: 375px) {
+  .container {
+    padding: 0 12px;
+  }
+}
