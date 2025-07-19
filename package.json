@@ -13,5 +13,8 @@
     "sass-embedded": "^1.89.2",
     "scss": "^0.2.4",
     "vite": "^7.0.4"
+  },
+  "dependencies": {
+    "swiper": "^11.2.10"
   }
 }

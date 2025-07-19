@@ -8,6 +8,8 @@
 @use 'blocks/companies';
 @use 'blocks/offer';
 @use 'blocks/why-us';
+@use 'blocks/work';
+@use 'blocks/reviews';
 
 body {
   background: $black;
@@ -24,7 +26,7 @@ body {
     padding: 0 !important;
   }
 
-  &--offer {
+  &--color {
     background: $section-bg;
   }
 }
