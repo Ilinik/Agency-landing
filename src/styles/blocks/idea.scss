@@ -1,0 +1,95 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.idea {
+  padding: 80px 12px;
+  background: #ffb219;
+  border-radius: 4px;
+  border: 1px solid #a1aebf;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    margin-bottom: 16px;
+    @include title-text;
+    color: #0d0e14;
+  }
+
+  &__text {
+    margin-bottom: 32px;
+    @include gray-text;
+    color: rgba(0, 0, 0, 0.6);
+    max-width: 511px;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__send {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+  }
+
+  &__email {
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    border-radius: 30px;
+    border: 2px solid #a1aebf;
+    background: $white;
+    max-width: 288px;
+    width: 100%;
+
+    color: #0d0e14;
+    font-family: 'Archivo', sans-serif;
+    font-size: clamp(
+      0.875rem,
+      0.8446601941747572rem + 0.12944983818770225vw,
+      1rem
+    );
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.32px;
+  }
+
+  &__btn-send {
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 1000px;
+    background: $black;
+    cursor: pointer;
+
+    font-size: clamp(
+      0.75rem,
+      0.7196601941747572rem + 0.12944983818770225vw,
+      0.875rem
+    );
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: #232323;
+    }
+
+    &:active {
+      background: $black;
+    }
+  }
+}
+
+@media (max-width: 475px) {
+  .idea {
+    &__send {
+      flex-direction: column;
+    }
+  }
+}

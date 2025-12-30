@@ -1,22 +1,16 @@
 @use './utils/reset';
 @use './utils/variables' as *;
 @use './utils/fonts';
+@use './utils/mixins';
 
-@use './blocks/header/header';
+@use 'general';
 
-body {
-  background: $black;
-}
-
-.container {
-  max-width: 1300px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding: 0 12px;
-  }
-}
+@use 'blocks/header';
+@use 'blocks/hero';
+@use 'blocks/companies';
+@use 'blocks/offer';
+@use 'blocks/why-us';
+@use 'blocks/work';
+@use 'blocks/reviews';
+@use 'blocks/idea';
+@use 'blocks/footer';

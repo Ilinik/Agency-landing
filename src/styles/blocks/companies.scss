@@ -1,0 +1,133 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.companies {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__title {
+    flex: 1 0 0;
+    @include title-text;
+  }
+
+  &__text {
+    flex: 1 0 0;
+    @include gray-text;
+  }
+}
+
+.scroll {
+  margin-top: 64px;
+  width: 100%;
+  overflow: hidden;
+
+  &__top {
+    position: relative;
+    height: 74px;
+    overflow: hidden;
+  }
+
+  &__bottom {
+    margin-top: 20px;
+    position: relative;
+    height: 74px;
+    overflow: hidden;
+  }
+
+  $items-count: 10;
+  $item-width: 200px;
+  $duration: 100s;
+
+  &__item {
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #a1aebf;
+    border-radius: 10px;
+    gap: 12px;
+    height: 74px;
+    width: $item-width;
+    position: absolute;
+    left: calc($item-width * 10);
+    animation: leftScroll $duration linear infinite;
+
+    &:nth-child(1) {
+      animation-delay: calc($duration / $items-count * ($items-count - 1) * -1);
+    }
+
+    &:nth-child(2) {
+      animation-delay: calc($duration / $items-count * ($items-count - 2) * -1);
+    }
+
+    &:nth-child(3) {
+      animation-delay: calc($duration / $items-count * ($items-count - 3) * -1);
+    }
+
+    &:nth-child(4) {
+      animation-delay: calc($duration / $items-count * ($items-count - 4) * -1);
+    }
+
+    &:nth-child(5) {
+      animation-delay: calc($duration / $items-count * ($items-count - 5) * -1);
+    }
+
+    &:nth-child(6) {
+      animation-delay: calc($duration / $items-count * ($items-count - 6) * -1);
+    }
+
+    &:nth-child(7) {
+      animation-delay: calc($duration / $items-count * ($items-count - 7) * -1);
+    }
+
+    &:nth-child(8) {
+      animation-delay: calc($duration / $items-count * ($items-count - 8) * -1);
+    }
+
+    &:nth-child(9) {
+      animation-delay: calc($duration / $items-count * ($items-count - 9) * -1);
+    }
+
+    &:nth-child(10) {
+      animation-delay: calc(
+        $duration / $items-count * ($items-count - 10) * -1
+      );
+    }
+  }
+
+  @keyframes leftScroll {
+    to {
+      left: -200px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .companies {
+    &__title {
+      line-height: 40px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .companies {
+    &__title {
+      line-height: 30px;
+    }
+  }
+
+  .scroll {
+    &__top,
+    &__bottom {
+      height: 65px;
+    }
+
+    &__item {
+      height: 65px;
+    }
+  }
+}
